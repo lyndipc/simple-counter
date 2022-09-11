@@ -2,12 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/eggshell"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <!--    android:background="@drawable/pug"-->
-
 
     <TextView
         android:id="@+id/textView"
@@ -15,10 +13,13 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="casual"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/upgradeButton"
+        app:layout_constraintVertical_bias="0.626" />
 
     <Button
         android:id="@+id/button"
@@ -26,20 +27,37 @@
         android:layout_height="wrap_content"
         android:text="Add 1"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="casual"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/upgradeButton"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/upgradeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/cardview_light_background"
         android:text="Upgrade to Add 2"
+        android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="36dp"
+        android:src="@drawable/pug"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

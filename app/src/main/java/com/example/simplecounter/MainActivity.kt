@@ -19,14 +19,10 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.button)
         val upgradeButton = findViewById<Button>(R.id.upgradeButton)
 
-        // To improve efficiency, we could use increaseBy var
-        // var increaseBy = 1
 
         button.setOnClickListener {
-            // Handle user taps
-//            Toast.makeText(it.context, "Clicked Button!", Toast.LENGTH_SHORT).show()
-
-            if (counter >= 100) {
+            // Handle user taps based on counter and whether or not they've upgraded
+            if (counter >= 100 && !upgradeButton.isVisible) {
                 counter++
                 counter++
                 textView.text = counter.toString()
@@ -34,14 +30,13 @@ class MainActivity : AppCompatActivity() {
                 counter++
                 textView.text = counter.toString()
                 if (counter == 100) {
-                    upgradeButton.isVisible = true
-//                    upgradeButton.visibility = View.VISIBLE
+                    upgradeButton.visibility = View.VISIBLE
                 }
             }
         }
 
         upgradeButton.setOnClickListener {
-            // Upgrade button to Add 2
+            // Upgrade button to allow user to add 2
             button.text = "Add 2"
             upgradeButton.isVisible = false
             Toast.makeText(it.context, "Successfully upgraded to add 2!", Toast.LENGTH_SHORT).show()
