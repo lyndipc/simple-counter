@@ -11,21 +11,20 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:textSize="40sp"
         android:fontFamily="casual"
+        android:text="@string/textView"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upgradeButton"
-        app:layout_constraintVertical_bias="0.626" />
+        app:layout_constraintVertical_bias="0.508" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add 1"
+        android:text="@string/button"
         android:textSize="30sp"
         android:fontFamily="casual"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
@@ -39,11 +38,14 @@
         android:id="@+id/upgradeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:backgroundTint="@color/cardview_light_background"
-        android:text="Upgrade to Add 2"
+        android:text="@string/upgradeButton"
         android:textStyle="bold"
+        android:fontFamily="casual"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,13 +53,13 @@
         android:id="@+id/imageView"
         android:layout_width="350dp"
         android:layout_height="400dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="4dp"
         android:src="@drawable/pug"
+        android:contentDescription="@string/imageViewDescription"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             // Upgrade button to allow user to add 2
             button.text = "Add 2"
             upgradeButton.isVisible = false
-            Toast.makeText(it.context, "Successfully upgraded to add 2!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(it.context, "Upgrade Successful!", Toast.LENGTH_SHORT).show()
         }
     }
 }
